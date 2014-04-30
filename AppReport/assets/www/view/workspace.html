@@ -1,0 +1,82 @@
+<div id="workspaceView" data-role="page" data-dom-cache="false" class="my-page" >
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b" class="my-header">
+		<h1 style="margin-left:150px;">工作区</h1>
+	</div>
+	<div class="workspace-logo"></div>
+	<div class="workspace_info"></div>
+	<div data-role="content" >
+	
+	<!--<a href="#" data-role="button" data-icon="info" data-theme="e">欢迎使用这套系统！</a>-->
+		<ul data-role="listview" data-inset="true" rel="external">
+        	<li id="productMoniter"><a href="#">
+            	<img src="img/icon-inv.png">
+                <p class="ui-li-aside" style="width:80px;left:20px">生产实时监控</p>
+            </a></li>
+        </ul>
+		<ul data-role="listview" data-inset="true">
+        	<li id="reportForm"><a href="#">
+            	<img src="img/icon-reverse.png">
+                <p class="ui-li-aside" style="width:80px;left:20px">报表</p>
+            </a></li>
+        </ul>
+		<ul data-role="listview" data-inset="true">
+        	<li id="exceptionList"><a href="#">
+            	<img src="img/icon-reverse.png">
+                <p class="ui-li-aside" style="width:80px;left:20px">异常报警信息</p>
+            </a></li>
+        </ul>
+		<ul data-role="listview" data-inset="true">
+        	<li id="exit_workspace"><a>
+            	<img src="img/icon-exit.png">
+                <p class="ui-li-aside" style="width:40px;left:40px">退出</p>
+            </a></li>
+        </ul>
+
+	</div>
+
+
+<!-- dialog (yes/no)-->
+<div data-role="popup" id="popupDialogYesNo" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+    <div data-role="header" data-theme="a" class="ui-corner-top">
+        <h1>删除信息?</h1>
+    </div>
+    <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content" style="text-align:center">
+        <h3 class="ui-title">您确定要删除此客户信息吗?</h3>
+        <p>此操作不可回退.</p>
+        <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">取消</a>
+        <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">确定</a>
+    </div>
+</div>
+<!-- dialog end -->
+ 
+</div>
+
+<script>
+var url='ws://'+app.websocket.server+':'+app.websocket.port;
+var socket = new WebSocket(url,'echo-protocol'); 
+
+// 打开Socket 
+socket.onopen = function(event) { 
+console.log('____________web socket open:'+url);
+  // 发送一个初始化消息
+  socket.send('I am the client from phonegap and I\'m listening!'); 
+
+  // 监听消息
+  socket.onmessage = function(event) { 
+    console.log('Client received a message',event); 
+	myAlert('收到消息：'+event,null,'消息','关闭');
+  }; 
+
+  // 监听Socket的关闭
+  socket.onclose = function(event) { 
+    console.log('Client notified socket has closed',event); 
+	myAlert('与服务器通讯断开',null,'消息','关闭');
+  }; 
+
+  // 关闭Socket.... 
+  //socket.close() 
+};
+</script>
+
+
+

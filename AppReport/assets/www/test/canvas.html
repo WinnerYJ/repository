@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Mobile Canvas Test</title>
+    <link rel="stylesheet" href="../js/jqueryMobile/css/jquery.mobile.css" />
+    <script src="../js/jquery/jquery.js"></script>
+	<script src="../js/jqueryMobile/js/jquery.mobile.js"></script>
+</head>
+ 
+<body>
+ 
+    <script type="text/javascript">
+        $(function() {
+            var sizedWindowWidth = $(window).width() / 4;
+ 
+            $("#canvas").width(sizedWindowWidth);
+            $("#canvas").height(sizedWindowWidth);
+ 
+            $("#canvasDraw").click(function(){
+                var canvas = $("#canvas").get(0);
+ 
+                if(canvas)
+                {
+                    var canvasContext = canvas.getContext('2d');
+ 
+                    if(canvasContext)
+                    {
+                        canvasContext.canvas.width  = sizedWindowWidth;
+                        canvasContext.canvas.height = sizedWindowWidth;
+ 
+                        canvasContext.font = "bold 14px serif";
+                        canvasContext.fillText("Canvas is supported", 10, 20);
+                        canvasContext.fillStyle = "#ff0000";
+                        canvasContext.font = "italic 14px sans-serif";
+                        canvasContext.fillText("Hello Canvas", 30, 40);
+                        canvasContext.fillStyle = "#00ff00";
+                        canvasContext.fillRect(40, 50, 70, 20);
+                    }
+                }
+            });
+        });
+    </script>
+ 
+    <div data-role="page" id="mainPage">
+        <div data-role="header">
+            <h1>Mobile Canvas</h1>
+        </div>
+        <div data-role="content">
+            <canvas id="canvas">Canvas is not supported</canvas>
+            <input id="canvasDraw" type="button" value="Canvas Draw" />
+        </div>
+ 
+        <div data-role="footer">
+            <h1>Test</h1>
+        </div>
+    </div>
+ 
+</body>
+</html>

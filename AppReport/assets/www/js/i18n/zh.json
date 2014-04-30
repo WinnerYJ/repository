@@ -1,0 +1,76 @@
+i18n_zh={
+     "common":{
+	"loadDemoData":"刷新数据失败，请检查网络是否连接！将导入demo数据... ...",
+	"loadDataFailed":"提取数据失败，请检查网络是否连接！",
+	"failToRefresh":"刷新数据失败！",
+	"cancelLabel":"取消",
+	"okLabel":"确定",
+	"submitLabel":"提交",
+	"processing":"处理中，请稍候...",
+	"processSuccess":"处理成功！",
+	"processFailed":"处理失败！",
+	"developing":"此功能开发中...",
+	"loading":"加载中..."
+     },
+     "config":{
+	"languageLabel":"语言",
+	"lang":{"en":"English","zh":"中文"},
+	"network":"通讯",
+	"port":"端口"
+
+     },
+     "footer":{
+	"mainTabLabel":"主页",
+	"workspaceTabLabel":"工作区",
+	"taskPlanTabLabel":"工作计划",
+	"routeGuideTabLabel":"路线指导",
+	"queryTabLabel":"信息查询",
+	"moreTabLabel":"更多"
+
+     },
+     "login":{
+	"loginBtnLabel":"登 录",
+	"changePasswordLabel":"修改密码",
+	"versionLabel":"版本:",
+	"moreTabLabel":"",
+	"optionLabel":"选项"
+
+     },
+     "mainPage":{
+	"chart2":"磁盘使用率",
+	"chart1":"邮件已处理数",
+	"messageBoard":"信息公告",
+	"KPI":"销量达成",
+	"planToday":"今日计划",
+	"welcome":"欢迎"
+     },
+     "infoQuery":{
+	"standardFile":"标准文件",
+	"customerQuery":"客户查询",
+	"KPIQuery":"积效查询",
+	"REDQuery":"RED得分",
+	"inventoryQuery":"库存查询",
+	"orderQuery":"订单查询",
+	"discountQuery":"折让查询",
+	"todayPhoto":"今日照片"
+     },
+     "traveler":{
+	"dialogTitle":"设备批准",
+	"dialogContent":"些动作为执行设备批准，执行《确定》，放弃《取消》"
+     },
+     "fullCalendar":{
+	"option":{
+		"monthNames": ["一月份","二月份","三月份","四月份","五月份","六月份","七月份","八月份","九月份","十月份","十一月份","十二月份"],
+		"monthNamesShort": ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+		"dayNames": ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		"dayNamesShort": ["周日","周一","周二","周三","周四","周五","周六"],
+		"buttonText": {
+			"today": "今天",
+			"month": "月",
+			"week": "周",
+			"day": "天"
+		}
+	}
+     },
+     "end":{}
+}

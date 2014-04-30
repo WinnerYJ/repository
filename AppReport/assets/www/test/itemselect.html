@@ -1,0 +1,25 @@
+    <html>
+    <head>
+<script src="../js/jquery/jquery.js"></script>
+    </head>
+    <body>
+   <select id="drpColours">
+<option value="" selected="selected">Choose color</option>
+<option value="1">black</option>
+<option value="2">BLUE</option>
+</select>
+    <script language="javascript">
+    $(document).ready(function(){
+		//setColor('BLUE');
+	});
+	function setColor( color ) {
+		$('#drpColours option').each(function() {
+			this.selected = ( this.text.toLowerCase() === color.toLowerCase() );
+		});
+	}
+	
+	
+
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,120 @@
+<div id="settingView" data-role="page" data-dom-cache="false" >
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b" class="my-header">
+		<h1>系统设置</h1>
+	</div>
+
+    <div data-role="content" class="ui-corner-bottom ui-content">
+		
+		<div data-role="collapsible" data-content-theme="d">
+			<h4>语言</h4>
+			<fieldset data-role="controlgroup">
+				<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="en" checked="checked" disabled="true">
+				<label for="radio-choice-v-2a" >English</label>
+				<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="zh" disabled="true">
+				<label for="radio-choice-v-2b" >中文</label>
+			</fieldset>
+		</div>
+		<div data-role="collapsible" data-content-theme="d">
+			<h4>网络设备</h4>
+			<table>
+			<tr>
+			  <th><label style="width:200px" for="server" class="select">服务器地址:</label></th>
+			  <td style="width:400px">
+				<input type="text" name="server" id="server" value="">
+			  </td>
+			</tr>
+			<tr>
+			  <th><label style="width:200px" for="port" class="select">端口:</label></th>
+			  <td style="width:400px">
+				<input type="number" name="port" pattern="[0-9]*" id="port" value="">
+			  </td>
+			</tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-content-theme="d">
+			<h4>密码修改</h4>
+			<table>
+			<tr>
+			  <th width="200px" align="right">用户名:</th>
+			  <td style="width:400px">
+				<input type="text" id="username" value="">
+			  </td>
+			</tr>
+			<tr>
+			  <th width="200px" align="right">当前密码:</th>
+			  <td style="width:400px">
+				<input type="password" id="oldpassword" value="">
+			  </td>
+			</tr>
+			<tr>
+			  <th align="right">新密码:</th>
+			  <td style="width:400px">
+				<input type="password" id="newpassword" value="">
+			  </td>
+			</tr>
+			<tr>
+			  <th align="right">重复新密码:</th>
+			  <td style="width:400px">
+				<input type="password" id="newpassword2" value="">
+			  </td>
+			</tr>
+			<tr>
+			  <th></th>
+			  <td style="width:400px">
+				<a id="passwordReset_settingView" data-role="button" data-inline="true" data-theme="c">重置</a>
+				<a id="passwordChange_settingView" data-role="button" data-inline="true" data-theme="c">确定</a>
+			  </td>
+			</tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-content-theme="d">
+			<h4>其它</h4>
+			<table>
+			<tr>
+			  <th><label style="width:200px" class="select">设备名称:</label></th>
+			  <td style="width:400px">
+				<input type="text" id="device_name" value="" disabled="true">
+			  </td>
+			</tr>
+			<tr>
+			  <th><label style="width:200px" class="select">当前平台:</label></th>
+			  <td style="width:400px">
+				<input type="text" id="device_platform" value="" disabled="true">
+			  </td>
+			</tr>
+			<tr>
+			  <th><label style="width:200px" class="select">软件版本:</label></th>
+			  <td style="width:400px">
+				<div style="float:left;width:200px"><input type="text" id="app_version" value="" disabled="true"></div>
+				<div></div>
+			  </td>
+			</tr>
+			</table>
+		</div>
+
+		
+		<a id="btnClearAppData_setting" data-role="button" data-icon="refresh" >清除本地所有数据</a>
+		<a id="app_version_update" data-role="button" data-inline="true" data-theme="c" >下载最新版本</a>
+	
+		<!-- 下载进度条 -->  
+			<div class="upload_process_bar">  
+				<div class="upload_current_process"></div>  
+			</div>  
+			<div id="process_info"></div>  
+			</div>
+		<!-- 下载进度条 --> 
+		<!--<div style="width:200px"><input type="date" name="date" data-role="datebox" data-inline="true" data-options='{"mode":"flipbox"}' /></div>-->
+
+		<div align="center">
+        <a id="btnOk_settingView" data-role="button" data-inline="true" data-theme="b">确定</a>
+		<a id="btnCancel_settingView" data-role="button" data-inline="true" data-theme="b">退出</a>
+		</div>
+
+    </div>
+	
+
+	
+ 
+</div>
+
+

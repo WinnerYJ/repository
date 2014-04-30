@@ -1,0 +1,94 @@
+    <html>
+    <head>
+<script src="../js/jquery/jquery.js"></script>
+    </head>
+    <body>
+    <ul class="list_text odd_even" id="indexLinks">
+    <li><a href="#" target="_blank">111111111</a></li>
+    <li><a href="#" target="_blank">222222222</a></li>
+    <li><a href="#" target="_blank">333333333</a></li>
+    <li><a href="#" target="_blank">444444444</a></li>
+    <li><a href="#" target="_blank">555555555</a></li>
+    <li><a href="#" target="_blank">666666666</a></li>
+    <li><a href="#" target="_blank">www.baidu.com</a></li>
+    <li><a href="#" target="_blank">888888888</a></li>
+    <li><a href="#" target="_blank">999999999</a></li>
+    <li><a href="#" target="_blank">aaaaaaaaa</a></li>
+    <li><a href="#" target="_blank">bbbbbbbbb</a></li>
+    <li><a href="#" target="_blank">ccccccccc</a></li>
+    <li><a href="#" target="_blank">ddddddddd</a></li>
+    <li><a href="#" target="_blank">eeeeeeeee</a></li>
+    <li><a href="#" target="_blank">fffffffff</a></li>
+    <li><a href="#" target="_blank">ggggggggg</a></li>
+    <li><a href="#" target="_blank">www.codefans.net</a></li>
+    <li><a href="#" target="_blank">iiiiiiiii</a></li>
+    <li><a href="#" target="_blank">jjjjjjjjj</a></li>
+    <li><a href="#" target="_blank">kkkkkkkkk</a></li>
+    <li><a href="#" target="_blank">lllllllll</a></li>
+    <li><a href="#" target="_blank">mmmmmmmmm</a></li>
+    <li><a href="#" target="_blank">nnnnnnnnn</a></li>
+    <li><a href="#" target="_blank">ooooooooo</a></li>
+    <li><a href="#" target="_blank">ppppppppp</a></li>
+    <li><a href="#" target="_blank">www.163.com</a></li>
+    <li><a href="#" target="_blank">rrrrrrrrr</a></li>
+    <li><a href="#" target="_blank">sssssssss</a></li>
+    <li><a href="#" target="_blank">ttttttttt</a></li>
+    </ul>
+    <script language="javascript">
+    $(document).ready(function(){
+		//播放速度
+		var speed = 2000;
+		//控制范围，符合jQuery路径即可
+		var block = '#indexLinks li';
+		//需要显示的内容条目数
+		var eq = 1;
+		var h = 0;
+		if($(block).length > eq){//如果内容数目大于需要滚动的数目，开始滚动！
+			//隐藏除了第一个的其它所有节点
+			$(block).slice(eq).css('display','none');
+			//播放开始
+			h = setInterval('scrollContent("'+block+'",'+eq+',2)',speed);
+			/*
+			$('#siteBulletin').mouseout(function(){
+				h = setInterval('scrollContent("'+block+'",'+eq+',2)',speed);
+			});
+			$('#siteBulletin').mouseover(function(){
+				clearInterval(h);
+			});
+			*/
+		}
+    });
+    function scrollContent(block,eq,type){
+		//获取第节点
+		var firstNode = $(block);
+		//动画效果
+		switch(type){
+			case 1:
+			animation_out = {height:'hide'};
+			animation_in = {height:'show'};
+			break;
+			case 2:
+			animation_out = {opacity:'hide'};
+			animation_in = {opacity:'show'};
+			break;
+			case 3:
+			animation_out = {height:'hide',opacity:'hide'};
+			animation_in = {height:'show',opacity:'show'};
+			break;
+			default:'';
+		}
+		//开始动画
+		firstNode.eq(0).animate(animation_out,1000,function(){//隐藏
+			//克隆.追加到最后.隐藏
+			$(this).clone().appendTo($(this).parent()).css('display','none');
+			//显示第二个节点内容
+			firstNode.eq(eq).removeAttr('style').animate(animation_in,1000);
+			//删除第一个节点内容
+			$(this).remove();
+
+		});
+
+    }
+    </script>
+    </body>
+    </html>

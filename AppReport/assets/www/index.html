@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Woodpecker</title>
+	<!--
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/jquery-ui.js"></script>
+	<script src="js/jquery/jquery.xml2json.js"></script>
+	-->
+    <script>
+
+	var startDate= new Date();
+	var rootpath='';
+	document.write('<script src="'+rootpath+'js/init.js'+'" ><\/script>');
+	document.write('<script src="'+rootpath+'js/global.js'+'"><\/script>');
+	//document.write('<script src="js/barcodescanner.js'+'"><\/script>');
+
+    var onBodyLoad=function(){
+		changePage('login.html');
+		//changePage('view/CanvasPaint.html');
+		//changePage('view/workspace.html');
+		//changePage('view/fileUpload.html');
+		//changePage('view/invCheck1.html');
+		//changePage('view/invCheck21.html');
+		//changePage('view/invCheck3.html');
+		
+        var endDate=new Date();
+		//
+		//----------------------------------------------------最开始启动时执行
+		
+		dataStorageRestore();
+		
+		console.log('*** initilization take time:'+(startDate.getTime()-endDate.getTime()));
+	}
+
+	</script>
+	
+
+	<link rel="stylesheet" href="js/jqueryMobile/css/jquery.mobile.css" />
+	<link rel="stylesheet" href="js/jqueryMobile/jtsage/jqm-datebox.css" />
+	<link rel="stylesheet" href="css/main-android.css" />
+	<link rel="stylesheet" href="css/grid-listview.css" />
+
+</head>
+<body style="width: auto; height: auto" onload="onBodyLoad();">
+<div data-role="page" id="page" data-theme="b"></div>
+
+
+</body>
+</html>

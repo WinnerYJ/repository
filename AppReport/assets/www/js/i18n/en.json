@@ -1,0 +1,76 @@
+i18n_en={
+     "common":{
+	"loadDemoData":"refresh data failed,load demo data... ...",
+	"loadDataFailed":"Load data failed,pls check network！",
+	"failToRefresh":"failed to refresh！",
+	"cancelLabel":"Cancel",
+	"okLabel":"Ok",
+	"submitLabel":"Submit",
+	"processing":"Processing,pls wait...",
+	"processSuccess":"Processed successfully！",
+	"processFailed":"Processed failed！",
+	"developing":"developing...",
+	"loading":"Loading..."
+     },
+     "config":{
+	"languageLabel":"Language",
+	"lang":{"en":"English","zh":"中文"},
+	"network":"Network",
+	"port":"Port"
+
+     },
+     "footer":{
+	"mainTabLabel":"Home",
+	"workspaceTabLabel":"workspace",
+	"taskPlanTabLabel":"Task Plan",
+	"routeGuideTabLabel":"Router Guide",
+	"queryTabLabel":"Info Query",
+	"moreTabLabel":"More"
+
+     },
+     "login":{
+	"loginBtnLabel":"Login",
+	"changePasswordLabel":"修改密码",
+	"versionLabel":"Version:",
+	"moreTabLabel":"",
+	"optionLabel":"Options"
+
+     },
+     "mainPage":{
+	"chart2":"Disk Used",
+	"chart1":"Mail.TotalRouted",
+	"messageBoard":"Message Board",
+	"KPI":"KPI Info.",
+	"planToday":"Planing Today",
+	"welcome":"Welcome"
+     },
+     "infoQuery":{
+	"standardFile":"标准文件",
+	"customerQuery":"客户查询",
+	"KPIQuery":"积效查询",
+	"REDQuery":"RED得分",
+	"inventoryQuery":"库存查询",
+	"orderQuery":"订单查询",
+	"discountQuery":"折让查询",
+	"todayPhoto":"今日照片"
+     },
+     "traveler":{
+	"dialogTitle":"Device approval",
+	"dialogContent":"this action to perform approve the device,do that click 《OK》,cancel to click 《Exit》 "
+     },
+     "fullCalendar":{
+	"option":{
+		"monthNames": ["January","February","March","April","May","June","July","August","September","October","November","December"],
+		"monthNamesShort": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+		"dayNames": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+		"dayNamesShort": ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+		"buttonText": {
+			"today": "today",
+			"month": "month",
+			"week": "week",
+			"day": "day"
+		}
+	}
+     },
+     "end":{}
+}
