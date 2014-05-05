@@ -114,10 +114,12 @@ function appLoad() {
 jq(document).on(app.click, "#setting", function() {
 	changePage("setting.html");
 });
+
 jq(document).on(app.click, "#loginBtn", function() {
 	loginAction();
 
 });
+
 $(document).on("pageinit", "#loginView", function(e) {
 	jq('#app_version').html('<div>版本号：' + app.version + '</div>');
 	//
@@ -206,19 +208,23 @@ function loginExe(username, password) { //执行登录
 $(document).on("pageinit", "#settingView", function(e) {
 
 });
+
 jq(document).on("pagebeforeshow", "#settingView", function(e) {
 	console.log('pagebeforeshow');
 
 });
+
 jq(document).on("pageshow", "#settingView", function(e) {
 	settingFormInit();
 });
+
 jq(document).on(app.click, "#btnOk_settingView", function(e) {
 
 	settingFormSubmit();
 
 
 });
+
 jq(document).on(app.click, "#btnClearAppData_setting", function() {
 	cleanLocalData();
 });
@@ -239,6 +245,7 @@ function cleanLocalData() {
 	}
 
 }
+
 jq(document).on(app.click, "#app_version_update", function() {
 	myConfirm('您确定要下载最新版本吗?', onConfirm, '提示', '确定,取消')
 
@@ -249,6 +256,7 @@ jq(document).on(app.click, "#app_version_update", function() {
 	}
 
 });
+
 jq(document).on(app.click, "#btnCancel_settingView", function(e) {
 	appLoad();
 
@@ -258,11 +266,13 @@ jq(document).on(app.click, "#btnCancel_settingView", function(e) {
 jq(document).on(app.click, "#app_version_update", function(e) {
 
 });
+
 jq(document).on(app.click, "#passwordReset_settingView", function(e) {
 	jq('#oldpassword').val('');
 	jq('#newpassword').val('');
 	jq('#newpassword2').val('');
 });
+
 jq(document).on(app.click, "#passwordChange_settingView", function(e) {
 	changePassword();
 });
@@ -407,6 +417,7 @@ app.dominoinfo = {
 		]
 	}
 };
+
 var chart = (function() {
 	function chart2(option) {
 		var data = app.dominoinfo.chart2;
