@@ -64,11 +64,11 @@ function eventSearchButton(){
 }
 function exitApp(){
 	navigator.notification.confirm(
-            '确定要退出程序吗?',  // message
-            onConfirm,              // callback to invoke with index of button pressed
-            '提示',            // title
-            '确定,取消'          // buttonLabels
-        );
+        '确定要退出程序吗?',  // message
+        onConfirm,              // callback to invoke with index of button pressed
+        '提示',            // title
+        '确定,取消'          // buttonLabels
+    );
 	function onConfirm(button) {
 		//alert('You selected button ' + button);
 		if(button==1){
